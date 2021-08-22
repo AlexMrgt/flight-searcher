@@ -4,7 +4,7 @@
 
 Это `frontend` проекта "Flights-searcher". Это сайт для авиабилетов.
 
-[Ссылка на сайт Flights-searcher]()
+[Ссылка на сайт Flights-searcher](https://flight-searcher.vercel.app/)
 
 ## Функционал
 
