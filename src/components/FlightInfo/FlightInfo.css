@@ -1,0 +1,42 @@
+.flight-info{
+  display: flex;
+  flex-direction: column;
+  grid-area: flight-info;
+}
+
+.flight-info__airports{
+  padding: 0;
+  margin:0;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 22px;
+  color: #424242;
+}
+
+.flight-info__date-time{
+  padding: 0;
+  margin:0;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #878787;
+}
+
+.flight-info__datetime-separator{
+  padding: 0 10px;
+}
+
+.flight-info__carrier{
+  padding: 0;
+  margin:0;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #878787;
+}

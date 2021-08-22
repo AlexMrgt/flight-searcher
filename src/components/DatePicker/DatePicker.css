@@ -1,0 +1,30 @@
+
+.date-picker {
+  position: absolute;
+  top:0;
+  right: 0px;
+
+  z-index: 5;
+
+  background-color: #1157A7;
+  padding: 15px;
+  width: 500px;
+  max-height: 400px;
+  display: none;
+}
+
+.date-picker_active{
+  display: block;
+}
+
+.react-calendar__tile:hover{
+  cursor: pointer;
+}
+
+.react-calendar__tile--active{
+  color: white;
+  background-color: crimson;
+  border-radius: 5px;
+}
+
+

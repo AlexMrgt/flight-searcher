@@ -1,0 +1,36 @@
+.logout-btn{
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  display: flex;
+  border: none;
+  gap: 20px;
+  color: #1157A7;
+  background-color: transparent;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 22px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all .3s;
+
+}
+
+.logout-btn:hover{
+  background-color: steelblue;
+  color: white;
+  cursor: pointer;
+}
+
+.logout-btn::after{
+  content: '';
+  background-image: url('../../images/icons/logout.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+}

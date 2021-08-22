@@ -1,0 +1,83 @@
+.flight{
+  display: grid;
+  grid-template-columns: min-content auto auto;
+  grid-template-areas:
+  "image flight-info like"
+  "image flight-info price";
+  padding: 20px 0 20px 5px;
+  margin-right: 5px;
+  border-bottom: 1px solid;
+  border-color: rgba(135, 135, 135, 0.2);
+}
+
+.flight::before{
+  content: '';
+  width: 64px;
+  height:64px;
+  border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+  background-color: #F2F8FF;
+  grid-area: image;
+  margin-right: 24px;
+}
+
+.flight::after{
+  content: '';
+  width: 64px;
+  height:64px;
+  background-image: url('../../images//icons/plane.svg');
+  border-radius: 50%;
+  justify-self: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  grid-area: image;
+  margin-right: 24px;
+}
+
+.flight__like{
+  grid-area: like;
+  width: 25px;
+  height: 25px;
+  justify-self: flex-end;
+  border: none;
+  background-color: transparent;
+  background-image: url('../../images/icons/disliked.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.flight__like_active{
+  background-image: url('../../images/icons/liked.svg');
+}
+
+.flight__like:hover{
+  transform:  scale(1.2, 1.2);
+}
+
+.flight__price{
+  grid-area: price;
+  align-self: flex-end;
+  justify-self: flex-end;
+  padding: 0;
+  margin: 0;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 22px;
+  color: #878787;
+}
+
+.flight__price-value{
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 22px;
+  color: #424242;
+  padding-left: 5px;
+}
+

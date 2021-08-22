@@ -1,0 +1,42 @@
+.not-found{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.not-found__title{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 50px;
+  padding-bottom: 50px;
+}
+
+.not-found__description{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+
+.not-found__return-link{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: black;
+  padding: 10px;
+  transition: all .3s;
+  border-radius: 15px;
+}
+
+.not-found__return-link:hover{
+  background-color: steelblue;
+  color: white;
+}

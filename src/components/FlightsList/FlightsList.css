@@ -1,0 +1,28 @@
+.flight-list{
+  margin: 0;
+  padding: 0;
+  height: 515px;
+  overflow-y:scroll;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.flight-list::-webkit-scrollbar {
+  width: 2px;
+}
+
+.flight-list::-webkit-scrollbar-track {
+  background-color: #E7E7E7;
+  border-radius: 100px;
+}
+
+.flight-list::-webkit-scrollbar-thumb {
+  background-color: #1157A7;
+  border-radius: 100px;
+}
+
+/* for non-v8 */
+.flight-list{
+  scrollbar-width:thin;
+}
