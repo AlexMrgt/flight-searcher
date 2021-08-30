@@ -27,13 +27,13 @@ const flightsReducer = (state: FlightsState = initialState, action: FlightsActio
       return {
         ...state,
         loading: false,
-        rawData: action.payload.data,
-        data: parseFlights(action.payload.data),
+        rawData: action.payload,
+        data: parseFlights(action.payload),
         loadingError: null,
       }
     }
 
-    case flightsActionTypesEnum.SET_FLIGHTS_LOADING: {
+    case flightsActionTypesEnum.SET_FLIGHTS_LOADING : {
       return {
         ...state,
         loading: true,

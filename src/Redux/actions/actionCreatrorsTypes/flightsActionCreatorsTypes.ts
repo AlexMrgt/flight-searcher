@@ -3,35 +3,34 @@ import { FlightData } from "../../../utils/interfaces/flightInterfaces";
 export enum flightsActionTypesEnum {
   SET_FLIGHTS = "SET_FLIGHTS",
   SET_FLIGHTS_LOADING = "SET_FLIGHTS_LOADING",
-  SET_FLIGHTS_ERROR = "SET_FLIGHTS_ERROR"
+  SET_FLIGHTS_ERROR = "SET_FLIGHTS_ERROR",
+  START_FLIGHTS_LOADING = 'START_FLIGHTS_LOADING'
+}
+export interface LoadFlightsErrorPayloadType {
+  error: string,
 }
 
-// for payloads
-export interface GetFlightsPayloadType {
-  data: FlightData;
-}
-
-export interface GetFlightsErrorPayloadType {
-  error: string;
-}
-
-// for actions
-export interface GetFlightsLoadingActionType {
-  type: typeof flightsActionTypesEnum.SET_FLIGHTS_LOADING;
-  payload: Date,
-}
-
-export interface GetFlightsActionType  {
+export interface LoadFlightsActionType {
   type: typeof flightsActionTypesEnum.SET_FLIGHTS;
-  payload: GetFlightsPayloadType;
+  payload: FlightData;
 };
 
-export interface GetFlightsErrorActionType {
+export interface LoadFlightsErrorActionType {
   type: typeof flightsActionTypesEnum.SET_FLIGHTS_ERROR;
-  payload: GetFlightsErrorPayloadType;
+  payload: LoadFlightsErrorPayloadType,
+};
+
+export interface LoadFlightsStartActionType {
+  type: typeof flightsActionTypesEnum.START_FLIGHTS_LOADING;
+  payload: Date;
+};
+
+export interface LoadFlightsOnLoadingActionType {
+  type: typeof flightsActionTypesEnum.SET_FLIGHTS_LOADING;
 };
 
 export type FlightsActionsTypes =
-  | GetFlightsLoadingActionType
-  | GetFlightsActionType
-  | GetFlightsErrorActionType;
+  | LoadFlightsStartActionType
+  | LoadFlightsOnLoadingActionType
+  | LoadFlightsActionType
+  | LoadFlightsErrorActionType;

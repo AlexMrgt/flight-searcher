@@ -2,8 +2,9 @@ import {createStore, applyMiddleware, compose } from 'redux';
 import {routerMiddleware}  from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from './reducers/index';
-import rootSaga from './sagas/flightsSaga';
+import rootSaga from './sagas/flightSaga';
 import { history } from './reducers/index';
+
 
 const sagaMiddleware = createSagaMiddleware();
 

@@ -1,7 +1,7 @@
-import { SyntheticEvent, useEffect, useState } from 'react';
+import { SyntheticEvent, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
-import { loadFlightsLoading } from '../../Redux/actions/flights';
+
 import { getFlights, getIsFlightsLoading } from '../../Redux/selectors/flights';
 import FlightsList from '../FlightsList/FlightsList';
 import Slider from '../Slider/Slider';
@@ -9,12 +9,12 @@ import DatePicker from '../DatePicker/DatePicker';
 import { LogoutButton } from '../LogoutButton/LogoutButton';
 import './Flights.css';
 import Preloader from '../Preloader/Preloader';
+import { loadFlightsStart } from '../../Redux/actions/flights';
 
 
 interface Props {
   onLogout: () => void
 }
-
 
 const Flights: React.FC<Props> = ({
   onLogout,
@@ -45,12 +45,9 @@ const Flights: React.FC<Props> = ({
   const handlePickDate = (date: Date) => {
     setDate(date)
     setCalendarStatus(false);
-    dispatch(loadFlightsLoading(date));
+    dispatch(loadFlightsStart(date));
   }
 
-  useEffect(() => {
-    dispatch(loadFlightsLoading(date));
-  }, []);
   const flights = useSelector(getFlights);
   const isFlightsLoading = useSelector(getIsFlightsLoading);
 
